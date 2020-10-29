@@ -1,0 +1,28 @@
+.bg{
+    background-color:#c00cf1a2;
+}
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+     
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.faLinkedin, .faInstagram {
+    color: rgba(146, 32, 32, 0.349);
+}
+
+.faLinkedin:hover{
+    color:#0072b1;
+}
+
+.faInstagram:hover{
+    color:#c13584;
+}

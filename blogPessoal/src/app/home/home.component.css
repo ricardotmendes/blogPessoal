@@ -1,0 +1,9 @@
+.parallax{
+    background-image: url('https://ksr-ugc.imgix.net/assets/026/319/010/3169a6161dbe7c55db533490128b5f22_original.jpg?ixlib=rb-2.1.0&crop=faces&w=1552&h=873&fit=crop&v=1567272421&auto=format&frame=1&q=92&s=bd649cb9754215f375eae2fe79987c6f');
+    min-height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
