@@ -1,5 +1,21 @@
+
+
+
+.bg-color{
+    background-color:#FFE4C4;
+
+}
+
+.bg-color-button{
+
+    background-color: #bea5e6;
+
+}
+
+
+
 .parallax{
-    background-image: url('https://ksr-ugc.imgix.net/assets/026/319/010/3169a6161dbe7c55db533490128b5f22_original.jpg?ixlib=rb-2.1.0&crop=faces&w=1552&h=873&fit=crop&v=1567272421&auto=format&frame=1&q=92&s=bd649cb9754215f375eae2fe79987c6f');
+    background-image: url('https://i.imgur.com/tyCzxoc.jpg');
     min-height: 500px;
 
     background-attachment: fixed;

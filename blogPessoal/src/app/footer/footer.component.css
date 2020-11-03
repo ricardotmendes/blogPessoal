@@ -1,28 +1,38 @@
-.bg{
-    background-color:#c00cf1a2;
+
+.bg-1{
+
+    background-color: #696969;
+    
 }
 
+.bg-2{
+    background-color: #d4d4d481;
+}
 ul.social-network {
     list-style: none;
     display: inline;
-     
+  
     padding: 0;
-}
-
-ul.social-network li {
+  }
+  
+  ul.social-network li {
     display: inline;
     margin: 0;
     padding: 5px;
-}
-
-.faLinkedin, .faInstagram {
-    color: rgba(146, 32, 32, 0.349);
-}
-
-.faLinkedin:hover{
-    color:#0072b1;
-}
-
-.faInstagram:hover{
-    color:#c13584;
-}
+  }
+  
+  .faLinkedin, .faInstagram, .faGithub{
+      color: white;
+  }
+  
+  .faGithub:hover{
+    color: #000000;
+  }
+  
+  .faLinkedin:hover{
+  color: #0072b1;
+  }
+  
+  .faInstagram:hover{
+  color: #C13584;
+  }

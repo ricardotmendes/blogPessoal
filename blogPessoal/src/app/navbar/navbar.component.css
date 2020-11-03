@@ -1,4 +1,11 @@
+
+
 .texto {
   letter-spacing: .2rem;
   font-size: 16pt;  
+}
+
+.bg-color{
+  background-color:#FFE4C4;
+
 }
