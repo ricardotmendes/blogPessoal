@@ -12,15 +12,19 @@
                     <label for="usuario">Usuário</label>
                     <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
                         placeholder="seu apelido" [(ngModel)]='userLogin.usuario'>
-                    
+                        <!--[(ngModel)]='userLogin.usuario' serve para pegar o valor do gerado em userLogin e preencher o objeto -->
+
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Senha"  [(ngModel)]='userLogin.senha'>
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" [(ngModel)]='userLogin.senha'>
                 </div>
+                        <!--[(ngModel)]='userLogin.senha'> serve para pegar o valor senha criado no objeto UserLogin -->
+
+
                 
                 <button type="submit" class="btn btn-outline-sucess w-25" (click)='entrar()' >Enviar</button>
-    
+                    <!--Evento click puxa o método entrar para o botão-->
             </div>
         </div>
     </div>

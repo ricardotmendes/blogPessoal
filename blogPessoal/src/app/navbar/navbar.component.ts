@@ -12,11 +12,15 @@ export class NavbarComponent implements OnInit {
   constructor(
     private router: Router,
     public auth: AuthService,
+    //public pois vai aparecer ou não na tela
   ) { }
 
   ngOnInit(): void {
   }
+
+  //método para sair do site
 sair() {
+  
   this.router.navigate(['/login'])
   localStorage.clear()
 }

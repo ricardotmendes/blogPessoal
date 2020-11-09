@@ -16,14 +16,14 @@
         <li class="nav-item">
           <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/feed">Feed</a>
         </li>
-
+        <!-- div ngIf puxa o do auth através do . o método btnLogin(), portanto só mostra esse botão se o estado for falso, usuário deslogado -->
         <div *ngIf="auth.btnLogin()">
           <li class="nav-item">
             <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
           </li>
 
         </div>
-
+        <!-- div ngIf puxa o do auth através do . o método btnLogin(), portanto só mostra esse botão se o estado for falso, usuário deslogado -->
         <div *ngIf="auth.btnLogin()">
           <li class="nav-item">
             <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
@@ -31,15 +31,12 @@
           </li>
 
         </div>
-
+        <!-- div ngIf puxa o do auth através do . o método btnSair(), portanto só mostra esse botão se o estado for falso, usuário estiver logado -->
         <div *ngIf="auth.btnSair()">
           <li class="nav-item">
             <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
           </li>
         </div>
-
-
-
 
 
       </ul>

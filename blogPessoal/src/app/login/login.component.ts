@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+   //método para LOGAR usuarios. Usando o subscribe ele pega as informações em formato Json e transforma em um objeto, usando o resp: UserLogin, 
+    // com o localStorage.setItem('token', this.userLogin.token) acessa o token e manda pro localStorage, garantindo o status "logado"
   entrar() {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
      this.userLogin = resp 
