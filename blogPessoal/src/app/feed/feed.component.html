@@ -73,10 +73,10 @@
                         <div class="row mt-3 mb-3">
                             <div class="col-md-10 pr-0">
                                 <input class="form-control w100" type="search" placeholder="Pesquisar postagem"
-                                    arial-label="Pesquisar">
+                                    arial-label="Pesquisar"[(ngModel)]='titulo'>
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100" type="button" (click)='findByTituloPostagem()'>Pesquisar</button>
                             </div>
                         </div>
 
@@ -93,11 +93,12 @@
 
 
                                             <div class="col-md-4 d-flex align-items-end">
-                                                <button class='mr-3 btn btn-outline-info'>
+                                                <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
                                                     Editar
                                                 </button>
-                                                <button class='btn btn-outline-danger'>
-                                                    Editar
+                    
+                                                <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
+                                                    Apagar
                                                 </button>
                                             </div>
                                         </div>
