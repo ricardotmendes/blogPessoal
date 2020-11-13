@@ -1,48 +1,52 @@
-<div class="container">
-    <div class="row mt-5 mb-5">
-        <div class="col-md-12">
-            <h1 class="text-center">Cadastrar</h1>
+<div class="bg-color">
+    <div class="container">
+        <div class="row mt mb-5">
+            <div class="col-md-12">
+                <h1 class="text-center">Cadastrar</h1>
+            </div>
+    
         </div>
-
-    </div>
-    <div class="row mb-5 d-flex justify-content-center">
-        <div class="col-md-8">
-            <div>
-
-                <div class="form-group">
-                    <label for='nome'>Nome</label>
-                    <input type="text" class='form-control' id="nome" placeholder="Digite seu nome aqui"
-                        [(ngModel)]='user.nome'>
-                        <!--[(ngModel)]='user.nome' serve para pegar o valor digitado de Nome e mandar para variável user.nome -->
-
-                </div>
-                <div class="form-group">
-                    <label for='usuario'>Usuario</label>
-                    <input type="text" class='form-control' id="usuario" placeholder="nickname"
-                        [(ngModel)]='user.usuario'>
-                        <!--[(ngModel)]='user.usuario' serve para pegar o valor digitado de Usuario e mandar para variável user.usuario -->
-
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
-                        (input)='conferirSenha($event)' value='{{senha}}' >
-                </div>
-
-                        <!--(input)='conferirSenha($event)' value='{{senha}}' atravé do evento input, ele traz o método conferirSenha() o parâmetro dentro é $event e o valor pego vai para uma  variável senha, a variavel criada no TS , entre{{}} que é de forma interpolada -->
-
-                <div class="form-group">
-                    <label for="senhaConf">Confirmar Senha</label>
-                    <input type="password" class="form-control" id="senhaConf"
-                        placeholder="Digite a confirmação de senha" [(ngModel)]='user.senha'>
-                </div>
-                        <!--[(ngModel)]='user.senha' serve para pegar o valor digitado de Senha (já validado)e mandar para variável user.senha -->
-
-                <div class="dflex justify-content-center">
-                    <button class="btn btn-outline-sucess w-25" (click)='cadastrar()'>Cadastrar</button>
-                    <!--Evento click puxa o método cadastrar para o botão-->
+        <div class="row mb-5 d-flex justify-content-center">
+            <div class="col-md-8">
+                <div>
+    
+                    <div class="form-group">
+                        <label for='nome'>Nome</label>
+                        <input type="text" class='form-control' id="nome" placeholder="Digite seu nome aqui"
+                            [(ngModel)]='user.nome'>
+                            <!--[(ngModel)]='user.nome' serve para pegar o valor digitado de Nome e mandar para variável user.nome -->
+    
+                    </div>
+                    <div class="form-group">
+                        <label for='usuario'>Usuario</label>
+                        <input type="text" class='form-control' id="usuario" placeholder="nickname"
+                            [(ngModel)]='user.usuario'>
+                            <!--[(ngModel)]='user.usuario' serve para pegar o valor digitado de Usuario e mandar para variável user.usuario -->
+    
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
+                            (input)='conferirSenha($event)' value='{{senha}}' >
+                    </div>
+    
+                            <!--(input)='conferirSenha($event)' value='{{senha}}' atravé do evento input, ele traz o método conferirSenha() o parâmetro dentro é $event e o valor pego vai para uma  variável senha, a variavel criada no TS , entre{{}} que é de forma interpolada -->
+    
+                    <div class="form-group">
+                        <label for="senhaConf">Confirmar Senha</label>
+                        <input type="password" class="form-control" id="senhaConf"
+                            placeholder="Digite a confirmação de senha" [(ngModel)]='user.senha'>
+                    </div>
+                            <!--[(ngModel)]='user.senha' serve para pegar o valor digitado de Senha (já validado)e mandar para variável user.senha -->
+    
+                    <div class="dflex justify-content-center">
+                        <button class="btn btn-outline-sucess w-25" (click)='cadastrar()'>Cadastrar</button>
+                        <!--Evento click puxa o método cadastrar para o botão-->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
+

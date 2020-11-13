@@ -1,4 +1,4 @@
-<div class='bg-color'>
+<div class="bg">
     <div class="container">
 
         <div class="row">
@@ -51,18 +51,14 @@
                 <!--Botões postagens e pesquisa-->
                 <hr class="mt-5 mb-5">
                 <nav class="d-flex justify-content-center">
-
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-
                         <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab"
                             data-toggle="tab" href="#minhas-postagens" role="tab" aria-controls="nav-home"
                             aria-selected="true">Minhas Postagens</a>
 
                         <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab"
                             data-toggle="tab" href="#postagens-temas" role="tab" aria-controls="nav-profile"
-                            aria-selected="false">Postagens
-                            por tema</a>
-
+                            aria-selected="false">Postagens por tema</a>
                     </div>
                 </nav>
 
@@ -71,12 +67,15 @@
                     <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
                         aria-labelledby="nav-postagens-tab">
                         <div class="row mt-3 mb-3">
+
+
                             <div class="col-md-10 pr-0">
                                 <input class="form-control w100" type="search" placeholder="Pesquisar postagem"
-                                    arial-label="Pesquisar"[(ngModel)]='titulo'>
+                                    arial-label="Pesquisar" [(ngModel)]='titulo'>
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100" type="button" (click)='findByTituloPostagem()'>Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100" type="button"
+                                    (click)='findByTituloPostagem()'>Pesquisar</button>
                             </div>
                         </div>
 
@@ -93,11 +92,13 @@
 
 
                                             <div class="col-md-4 d-flex align-items-end">
-                                                <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
+                                                <button class="mr-3 btn btn-outline-info"
+                                                    [routerLink]="['/editar-post', item.id]">
                                                     Editar
                                                 </button>
-                    
-                                                <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
+
+                                                <button class="btn btn-outline-danger ml-3"
+                                                    [routerLink]="['/delete-post', item.id]">
                                                     Apagar
                                                 </button>
                                             </div>
@@ -130,16 +131,60 @@
                     <div class="tab pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
 
                         <div class="row mt-3 mb-3">
+
                             <div class="col-md-10 pr-0">
                                 <input class="form-control w100" type="search" placeholder="Pesquisar postagem"
-                                    arial-label="Pesquisar">
+                                    arial-label="Pesquisar" [(ngModel)]='nomeTema'>
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100" type="button"
+                                    (click)='findByNomeTema()'>Pesquisar</button>
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy: key: reverse'>
+                                    <div class="card-header">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-md-8">
+                                                <h5 class='card-title'> {{item.titulo}} </h5>
+                                                <small>Tema: {{item.tema.descricao}}</small>
+                                            </div>
+
+
+                                            <div class="col-md-4 d-flex align-items-end">
+                                                <button class="mr-3 btn btn-outline-info"
+                                                    [routerLink]="['/editar-post', item.id]">
+                                                    Editar
+                                                </button>
+
+                                                <button class="btn btn-outline-danger ml-3"
+                                                    [routerLink]="['/delete-post', item.id]">
+                                                    Apagar
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
+                                        <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                                            Postado em {{item.data | date: 'dd/MM/yyyy'}} às
+                                            {{item.data | date:'HH:mm'}}</small>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
                     </div>
+
+
+
 
                 </div>
                 <!--/Botões postagens e pesquisa-->
@@ -148,4 +193,6 @@
         </div>
     </div>
 
+
 </div>
+   
